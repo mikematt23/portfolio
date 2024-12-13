@@ -6,15 +6,15 @@ const projects = [
     title:"React Quiz",
     link: "https://zingy-dieffenbachia-a1cfe1.netlify.app/",
     codeLink:"https://github.com/mikematt23/quizApp",
-    summary: "This is a react app that utilizes useState, useEffect, and many other react hooks and concepts to create a UI that lets a user log in and test there knowalge of react",
+    summary: "This is a react app that utilizes useState, useEffect, and many other react hooks and concepts to create a UI that lets a user login and test there knowalge of react.",
     img : "./assets/Screenshot 2024-12-13 130644.png"
   },
   {
     id:1,
     title : "Express API",
     link: "https://reactquizexpressapi-production.up.railway.app/",
-    codeLink:"www.code.com",
-    summary: "This is an API that communicates with a mySQL database using express.js and node to store user information and retive the data based on the provided routes",
+    codeLink:"https://github.com/mikematt23/reactQuizExpressAPI",
+    summary: "This is an API that connects to a front end and communicates with a mySQL database using express.js and node to store user information and retive the data based on the provided routes. Threre is no styling or front end for this project.",
     img : "./assets/Screenshot 2024-12-13 130539.png"
   }
 ]
@@ -69,10 +69,8 @@ nextButton.addEventListener("click",()=>{
   img.src =projects[index].img
   h2.textContent = projects[index].title
   summary.textContent = projects[index].summary
-  link.textContent = "Project"
   link.href = projects[index].link
   link.target = "_blank"
-  codeLink.textContent = "Code"
   codeLink.href = projects[index].codeLink
   codeLink.target = "_blank"
 })
@@ -86,10 +84,8 @@ backButton.addEventListener("click",()=>{
   img.src =projects[index].img
   h2.textContent = projects[index].title
   summary.textContent = projects[index].summary
-  link.textContent = "Project"
   link.href = projects[index].link
   link.target = "_blank"
-  codeLink.textContent = "Code"
   codeLink.href = projects[index].codeLink
   codeLink.target = "_blank"
 })
