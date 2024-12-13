@@ -1,0 +1,12 @@
+
+
+@keyframes Zflip {
+    from{transform: rotateY(0px);}
+    to{ transform: rotateY(180deg);}
+}
+
+.zflip{
+    animation-name: Zflip;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
