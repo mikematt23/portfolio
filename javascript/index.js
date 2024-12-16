@@ -25,6 +25,10 @@ let index = 0
 const projectHolder = document.getElementById("projectHolder")
 const nextButton = document.getElementById("next")
 const backButton = document.getElementById("back")
+const nextButton1 = document.getElementById("next1")
+const backButton1 = document.getElementById("back1")
+console.log(backButton)
+console.log(nextButton)
 
 //creating elements for projects
 const newDiv = document.createElement("div")
@@ -76,6 +80,38 @@ nextButton.addEventListener("click",()=>{
 })
 
 backButton.addEventListener("click",()=>{
+  console.log('here')
+  if(index === 0){
+    index = projects.length-1
+  }else{
+    index= index-1
+  }
+  img.src =projects[index].img
+  h2.textContent = projects[index].title
+  summary.textContent = projects[index].summary
+  link.href = projects[index].link
+  link.target = "_blank"
+  codeLink.href = projects[index].codeLink
+  codeLink.target = "_blank"
+})
+
+nextButton1.addEventListener("click",()=>{
+  if(index === projects.length-1){
+    index = 0
+  }else{
+    index++
+  }
+  img.src =projects[index].img
+  h2.textContent = projects[index].title
+  summary.textContent = projects[index].summary
+  link.href = projects[index].link
+  link.target = "_blank"
+  codeLink.href = projects[index].codeLink
+  codeLink.target = "_blank"
+})
+
+backButton1.addEventListener("click",()=>{
+  console.log('here')
   if(index === 0){
     index = projects.length-1
   }else{

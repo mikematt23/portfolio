@@ -1,9 +1,14 @@
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 body{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
+  margin: 1rem;
 }
 ul{
   padding:0;
@@ -15,13 +20,13 @@ h1,h2{
   padding: 0;
 }
 input, textarea{
-  width: 200%;
+  width: 80%;
   margin: 2%;
   border-radius: 4px;
   background-color: rgba(240, 248, 255, 0.532);
 }
 textarea{
-  height: 400%
+  height: 80%
 }
 .gridHolder{
   height: 90%;
@@ -32,7 +37,7 @@ textarea{
   grid-row-gap:15px;
   grid-column-gap:15px;
   background-image: url("https://www.onlygfx.com/wp-content/uploads/2017/10/yellow-watercolor-splatter-3-1024x589.png");
- 
+  margin: 1rem;
   background-size: contain;
 }
 .grid-element{
@@ -67,19 +72,23 @@ textarea{
   align-items: center;
 }
 .project-holder{
-  height: 60%;
-  width: 60%;
+  height: 80%;
+  width: 100%;
   padding: 1rem;
   margin: .5rem;
   border-radius: 5px;
   border: solid black 1px;
   background-color: rgba(255, 255, 77, 0.804);
+  overflow-y: scroll;
 }
 .projectButton{
   border-radius: 50%;
   font-size: 2rem;
   background-color: rgba(3, 3, 3, 0.463);
   color: rgba(255, 255, 255, 0.473);
+}
+.mobile-buttons{
+  display: none;
 }
 .projectButton:hover{
   box-shadow: 3px 1px 1px black;
@@ -116,13 +125,14 @@ img{
   align-items: center;
 }
 .emailMessage{
-  height: 40%;
-  width : 100;
+  height: 100%;
+  width : 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  overflow-y: scroll;
 }
 .contact button {
   border-radius: 4px;
@@ -149,7 +159,15 @@ img{
 .skill-holder ul{
   margin: 1.5rem;
 }
-@media screen and (max-width: 820px) {
+.inputHolder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  margin: 1rem;
+}
+@media screen and (max-width: 1000px) {
   body{
     overflow: scroll;
   }
@@ -171,18 +189,40 @@ img{
     border-radius: 8px;
   }
   .projects{
+    height: 100%;
+    width: 100%;
     border: 1px solid;
     border-radius: 8px;
   }
+  .project-layout{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .project-holder{
     height: 60%;
-    width: 60%;
+    width: 100%;
     padding: 1rem;
     margin: .5rem;
     border-radius: 5px;
     border: solid black 1px;
     background-color: rgba(255, 255, 77, 0.804);
     overflow: scroll;
+  }
+  .projectButton{
+    display: none;
+  }
+  .mobile-buttons{
+    display:block;
+  }
+  .projectButton1{
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: rgba(3, 3, 3, 0.463);
+    color: rgba(255, 255, 255, 0.473);
   }
   .contact{
     border: 1px solid;

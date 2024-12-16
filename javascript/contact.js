@@ -9,21 +9,34 @@ const emailDiv = document.createElement('div')
 const buttonHolder = document.createElement("div")
 const sendButton = document.createElement("button")
 const cancelButton = document.createElement("button")
+const subjectHolder = document.createElement("div")
 const subject = document.createElement("input")
+const subjectLabel = document.createElement('label')
+const messageHolder = document.createElement("div")
 const message = document.createElement("textArea")
+const messageLabel = document.createElement("label")
 
 //adding values to html elements
 sendButton.textContent = "Send"
 cancelButton.textContent = "Cancel"
+subjectLabel.textContent = "Subject"
+messageLabel.textContent = "Message"
 
 //adding create elements to the created div
-emailDiv.appendChild(subject)
-emailDiv.appendChild(message)
+emailDiv.appendChild(subjectHolder)
+subjectHolder.appendChild(subjectLabel)
+subjectHolder.appendChild(subject)
+emailDiv.appendChild(messageHolder)
+messageHolder.appendChild(messageLabel)
+messageHolder.appendChild(message)
 emailDiv.appendChild(buttonHolder)
 buttonHolder.appendChild(sendButton)
 buttonHolder.appendChild(cancelButton)
 //ading classes 
 emailDiv.classList.add("emailMessage")
+subjectHolder.classList.add("inputHolder")
+messageHolder.classList.add("inputHolder")
+
 emailButton.addEventListener("click",()=>{
     contact.classList.add("zflip")
     h1inContact.classList.add("zflip")
