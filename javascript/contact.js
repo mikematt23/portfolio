@@ -1,6 +1,10 @@
+emailjs.init({
+    publicKey: "a-WWuZnSnIqU_JvvW",
+  })
 //geting html elements from document
 const contact = document.getElementById('contact')
 const modal = document.getElementById('myModal');
+const modalButton = document.getElementById('modalButton')
 const span = document.getElementsByClassName('close')[0];
 const contactInfo = document.getElementById("contact-info")
 const emailButton = document.getElementById("emailButton")
@@ -53,6 +57,7 @@ buttonHolder.appendChild(sendButton)
 buttonHolder.appendChild(cancelButton)
 //ading classes 
 emailDiv.classList.add("emailMessage")
+inputHolder.classList.add("userInputHolder")
 subjectHolder.classList.add("inputHolder")
 messageHolder.classList.add("inputHolder")
 emailHolder.classList.add("inputHolder")
@@ -67,13 +72,20 @@ emailButton.addEventListener("click",()=>{
 })
 
 sendButton.addEventListener('click',()=>{
-    emailDiv.style.display = "none"
-    contact.classList.remove("zflip")
-    h1inContact.classList.remove("zflip")
-    emailDiv.classList.remove('zflip')
-    contactInfo.style.display = ""
-    emailDiv.style.display = "none"
-    modal.style.display = 'block';
+    if(
+        subject.value === ''||
+        email.value === '' ||
+        messagew === ''
+    ){
+        modal.style.display = 'block';
+    }else{
+        emailDiv.style.display = "none"
+        contact.classList.remove("zflip")
+        h1inContact.classList.remove("zflip")
+        emailDiv.classList.remove('zflip')
+        contactInfo.style.display = ""
+        emailDiv.style.display = "none"
+    }
 })
 
 cancelButton.addEventListener('click',()=>{
@@ -83,6 +95,12 @@ cancelButton.addEventListener('click',()=>{
     emailDiv.classList.remove('zflip')
     contactInfo.style.display = ""
     emailDiv.style.display = "none"
+    subject.value = ''
+    email.value = ''
+    message.value = ''
 })
+modalButton.addEventListener("click",()=>{
+    modal.style.display = 'none';
+}) 
 
 
