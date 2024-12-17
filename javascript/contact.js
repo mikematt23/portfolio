@@ -1,17 +1,27 @@
 //geting html elements from document
 const contact = document.getElementById('contact')
+const modal = document.getElementById('myModal');
+const span = document.getElementsByClassName('close')[0];
 const contactInfo = document.getElementById("contact-info")
 const emailButton = document.getElementById("emailButton")
 const h1inContact = contact.querySelector("h1")
 
 //creating html elements
 const emailDiv = document.createElement('div')
+const inputHolder = document.createElement("div")
 const buttonHolder = document.createElement("div")
+
 const sendButton = document.createElement("button")
 const cancelButton = document.createElement("button")
+
 const subjectHolder = document.createElement("div")
 const subject = document.createElement("input")
 const subjectLabel = document.createElement('label')
+
+const emailHolder = document.createElement('div')
+const email = document.createElement("input")
+const eamilLabel = document.createElement("label")
+
 const messageHolder = document.createElement("div")
 const message = document.createElement("textArea")
 const messageLabel = document.createElement("label")
@@ -21,14 +31,23 @@ sendButton.textContent = "Send"
 cancelButton.textContent = "Cancel"
 subjectLabel.textContent = "Subject"
 messageLabel.textContent = "Message"
+eamilLabel.textContent = "Email"
 
 //adding create elements to the created div
-emailDiv.appendChild(subjectHolder)
+emailDiv.appendChild(inputHolder)
+
+inputHolder.appendChild(subjectHolder)
 subjectHolder.appendChild(subjectLabel)
 subjectHolder.appendChild(subject)
-emailDiv.appendChild(messageHolder)
+
+inputHolder.appendChild(emailHolder)
+emailHolder.appendChild(eamilLabel)
+emailHolder.appendChild(email)
+
+inputHolder.appendChild(messageHolder)
 messageHolder.appendChild(messageLabel)
 messageHolder.appendChild(message)
+
 emailDiv.appendChild(buttonHolder)
 buttonHolder.appendChild(sendButton)
 buttonHolder.appendChild(cancelButton)
@@ -36,6 +55,7 @@ buttonHolder.appendChild(cancelButton)
 emailDiv.classList.add("emailMessage")
 subjectHolder.classList.add("inputHolder")
 messageHolder.classList.add("inputHolder")
+emailHolder.classList.add("inputHolder")
 
 emailButton.addEventListener("click",()=>{
     contact.classList.add("zflip")
@@ -53,6 +73,7 @@ sendButton.addEventListener('click',()=>{
     emailDiv.classList.remove('zflip')
     contactInfo.style.display = ""
     emailDiv.style.display = "none"
+    modal.style.display = 'block';
 })
 
 cancelButton.addEventListener('click',()=>{
