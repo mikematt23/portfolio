@@ -3,9 +3,11 @@ emailjs.init({
   })
 //geting html elements from document
 const contact = document.getElementById('contact')
+
 const modal = document.getElementById('myModal');
 const modalButton = document.getElementById('modalButton')
-const span = document.getElementsByClassName('close')[0];
+const modalH1 = document.getElementById("modalH1")
+const modalH2 = document.getElementById("modalH2")
 const contactInfo = document.getElementById("contact-info")
 const emailButton = document.getElementById("emailButton")
 const h1inContact = contact.querySelector("h1")
@@ -75,8 +77,10 @@ sendButton.addEventListener('click',()=>{
     if(
         subject.value === ''||
         email.value === '' ||
-        messagew === ''
+        message.value === ''
     ){
+        modalH1.textContent = "Form Error"
+        modalH2.textContent = "Please Complete the form to send an email"
         modal.style.display = 'block';
     }else{
         emailDiv.style.display = "none"
@@ -85,7 +89,36 @@ sendButton.addEventListener('click',()=>{
         emailDiv.classList.remove('zflip')
         contactInfo.style.display = ""
         emailDiv.style.display = "none"
+
+        console.log(subject.value, message.value, email.value)
+
+        const templateParams = {
+            subject: subject.value,
+            email:email.value,
+            message:message.value
+        }
+
+        emailjs.send( "default_service",'userEmail', templateParams).then(
+            (response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            },
+            (error) => {
+              console.log('FAILED...', error);
+            },
+          );  
+          emailjs.send( "default_service",'myEmail', templateParams).then(
+            (response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            },
+            (error) => {
+              console.log('FAILED...', error);
+            },
+          ); 
     }
+
+    subject.value = ''
+    email.value = ''
+    message.value = ''
 })
 
 cancelButton.addEventListener('click',()=>{

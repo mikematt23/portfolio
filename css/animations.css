@@ -1,12 +1,30 @@
 
 
-@keyframes Zflip {
+@keyframes Zflip180 {
     from{transform: rotateY(0px);}
     to{ transform: rotateY(180deg);}
 }
 
+
+@keyframes shrink {
+    0%{height: 2%;}
+    100%{height: 100%;}
+}
+
 .zflip{
-    animation-name: Zflip;
+    animation-name: Zflip180;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+}
+
+.shrink{
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.shrink1{
+    animation-name: shrink;
+    animation-duration: 1s;
+
 }
