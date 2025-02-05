@@ -3,20 +3,40 @@
 const projects = [
   {
     id:0,
+    title:"Tea Time Shop",
+    link:"https://rococo-moxie-2d4439.netlify.app/",
+    codeLink:"https://github.com/mikematt23/tea-shop",
+    summary:"This project leverages React Router to manage front-end routing efficiently. It utilizes Redux for global state management, handling user, cart, and error information seamlessly." 
+    +"Basic React features like useState and useRef are employed alongside more advanced functionalities such as useEffect and useCallback. These features enable users to sign up, log in, shop," 
+    +"and make payments following REST principles. Additionally, the integration of the Stripe API handles user payments seamlessly.",
+    img:"./assets/Screenshot 2025-02-04 163115.png"
+  },
+  {
+    id:2,
+    title:"Tea Time Shop API",
+    link:"https://reashopnode-production.up.railway.app/",
+    codeLink:"https://github.com/mikematt23/reaShopNode",
+    summary:"This project is a Node.js/Express.jsREST API designed to provide a seamless experience for an e-commerce front end. It handles user requests such as signing in, logging in, cart storage, and payments while protecting and encrypting user data."+
+    " The API stores necessary data in a MySQL database and retrieves it based on predefined routes. Additionally, it integrates with the Stripe API to handle payments on the front end.",
+    img:"./assets/Screenshot 2025-02-04 200042.png"
+  },
+  {
+    id:2,
     title:"React Quiz",
     link: "https://zingy-dieffenbachia-a1cfe1.netlify.app/",
     codeLink:"https://github.com/mikematt23/quizApp",
-    summary: "This is a react app that utilizes useState, useEffect, and many other react hooks and concepts to create a UI that lets a user login and test there knowalge of react.",
+    summary: "This React app harnesses a variety of hooks, including useState and useEffect, to create an interactive user interface. It allows users to log in and test their knowledge of React, leveraging a robust set of concepts and features to provide a seamless and engaging experience.",
     img : "./assets/Screenshot 2024-12-13 130644.png"
   },
   {
-    id:1,
+    id:3,
     title : "Express API",
     link: "https://reactquizexpressapi-production.up.railway.app/",
     codeLink:"https://github.com/mikematt23/reactQuizExpressAPI",
-    summary: "This is an API that connects to a front end and communicates with a mySQL database using express.js and node to store user information and retive the data based on the provided routes. Threre is no styling or front end for this project.",
+    summary: "This API, built with Express.js and Node.js, interfaces with a front end and communicates with a MySQL database. It efficiently stores and retrieves user information based on predefined routes. Please note that this project focuses solely on the backend functionality, with no styling or front-end implementation.",
     img : "./assets/Screenshot 2024-12-13 130539.png"
   }
+
 ]
 //index of project
 let index = 0

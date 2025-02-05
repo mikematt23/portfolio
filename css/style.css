@@ -55,10 +55,39 @@ ul{
   padding:0;
   margin: 0;
 }
-h1,h2{
+h1{
+  font-family: "Parkinsans", sans-serif;
+  font-weight: 400;
+}
+h2{
   font-family: "Parkinsans", sans-serif;
   margin: 0;
   padding: 0;
+}
+p{
+  font-family: "Parkinsans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h3{
+  font-family: "Parkinsans", sans-serif;
+}
+a{
+  text-decoration: none;
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 3%;
+  margin: .1rem;
+  font-family: "Parkinsans", sans-serif;
+  background-color: rgba(255, 255, 0, 0.356);
+  color: black;
+  box-shadow: 3px 2px 2px black;
+}
+li{
+  font-family: "Parkinsans", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  margin: .8rem;
 }
 input, textarea{
   width: 80%;
@@ -98,6 +127,11 @@ textarea{
 .title h2{
   padding : .6rem;
 }
+.title img{
+  height: 30%;
+  width: 90%;
+  margin-top: 80%;
+}
 .projects{
   grid-row-start: 1;
   grid-row-end: 2;
@@ -118,12 +152,11 @@ textarea{
 .project-holder{
   height: 80%;
   width: 100%;
-  padding: 1rem;
-  margin: .5rem;
+  padding: 2rem;
+  margin: 1rem;
   border-radius: 5px;
- 
+
   background-color: rgba(255, 255, 77, 0.804);
-  overflow-y: scroll;
 }
 .projectButton{
   border-radius: 10%;
@@ -145,6 +178,8 @@ textarea{
   justify-content: center;
   align-items: center;
   padding: 1%;
+  margin: 2%;
+  overflow: none;
 }
 .linkHolder{
   display: flex;
