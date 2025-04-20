@@ -6,8 +6,8 @@ const projects = [
     title:"Tea Time Shop",
     link:"https://rococo-moxie-2d4439.netlify.app/",
     codeLink:"https://github.com/mikematt23/tea-shop",
-    summary:"This project leverages React Router to manage front-end routing efficiently. It utilizes Redux for global state management, handling user, cart, and error information seamlessly." 
-    +"Basic React features like useState and useRef are employed alongside more advanced functionalities such as useEffect and useCallback. These features enable users to sign up, log in, shop," 
+    summary:"This project leverages React Router to manage front-end routing efficiently. It utilizes Redux for global state management, handling user, cart, and error information seamlessly. " 
+    +"Basic React features like useState and useRef are employed alongside more advanced functionalities such as useEffect and useCallback. These features enable users to sign up, log in, shop, " 
     +"and make payments following REST principles. Additionally, the integration of the Stripe API handles user payments seamlessly.",
     img:"./assets/Screenshot 2025-02-04 163115.png"
   },
